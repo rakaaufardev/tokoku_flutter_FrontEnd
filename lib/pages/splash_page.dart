@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:tokoku/theme.dart';
 
 class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
   @override
   State<SplashPage> createState() => _SplashPageState();
 }
@@ -11,16 +13,18 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
 
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () => Navigator.pushNamed(context, '/sign-in'),
     );
 
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor1,
@@ -28,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
         child: Container(
           width: 210,
           height: 72,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
                 'assets/image_splashscreen.png',
