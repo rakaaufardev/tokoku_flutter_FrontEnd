@@ -41,9 +41,11 @@ class _MainPageState extends State<MainPage> {
             currentIndex: currentIndex,
             onTap: (value) {
               print(value);
-              setState(() {
-                currentIndex = value;
-              });
+              setState(
+                () {
+                  currentIndex = value;
+                },
+              );
             },
             type: BottomNavigationBarType.fixed,
             items: [
@@ -105,20 +107,17 @@ class _MainPageState extends State<MainPage> {
       );
     }
 
+//perbaiki widget body pake array
     Widget body() {
       switch (currentIndex) {
         case 0:
           return const HomePage();
-          break;
         case 1:
           return const ChatPage();
-          break;
         case 2:
           return const WishlistPage();
-          break;
         case 3:
           return const ProfilePage();
-          break;
 
         default:
           return const HomePage();
