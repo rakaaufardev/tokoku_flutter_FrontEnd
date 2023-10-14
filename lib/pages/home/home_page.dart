@@ -201,8 +201,8 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 width: defaultMargin,
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   ProductCard(),
                   ProductCard(),
                   ProductCard(),
@@ -236,8 +236,8 @@ class HomePage extends StatelessWidget {
         margin: const EdgeInsets.only(
           top: 14,
         ),
-        child: Column(
-          children: const [
+        child: const Column(
+          children: [
              ProductTile(),
              ProductTile(),
              ProductTile(),
